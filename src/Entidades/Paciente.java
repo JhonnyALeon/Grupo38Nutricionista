@@ -11,25 +11,25 @@ package Entidades;
  */
 public class Paciente {
     private int idPaciente;
-    private int dni;
     private String nombre;
+    private int dni;
     private String domicilio;
     private int telefono;
 
     public Paciente() {
     }
 
-    public Paciente(int dni, String nombre, String domicilio, int telefono) {
-        this.dni = dni;
+    public Paciente(String nombre, int dni, String domicilio, int telefono) {
         this.nombre = nombre;
+        this.dni = dni;
         this.domicilio = domicilio;
         this.telefono = telefono;
     }
 
-    public Paciente(int idPaciente, int dni, String nombre, String domicilio, int telefono) {
+    public Paciente(int idPaciente, String nombre, int dni, String domicilio, int telefono) {
         this.idPaciente = idPaciente;
-        this.dni = dni;
         this.nombre = nombre;
+        this.dni = dni;
         this.domicilio = domicilio;
         this.telefono = telefono;
     }
@@ -42,20 +42,20 @@ public class Paciente {
         this.idPaciente = idPaciente;
     }
 
-    public int getDni() {
-        return dni;
-    }
-
-    public void setDni(int dni) {
-        this.dni = dni;
-    }
-
     public String getNombre() {
         return nombre;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public int getDni() {
+        return dni;
+    }
+
+    public void setDni(int dni) {
+        this.dni = dni;
     }
 
     public String getDomicilio() {
@@ -76,9 +76,7 @@ public class Paciente {
 
     @Override
     public String toString() {
-        return "Paciente{" + "idPaciente=" + idPaciente + ", dni=" + dni + ", nombre=" + nombre + ", domicilio=" + domicilio + ", telefono=" + telefono + '}';
+        return "Paciente{" + "idPaciente=" + idPaciente + ", nombre=" + nombre + ", dni=" + dni + ", domicilio=" + domicilio + ", telefono=" + telefono + '}';
     }
-    
-    
-    
+
 }
