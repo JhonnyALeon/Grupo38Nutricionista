@@ -46,6 +46,8 @@ public class PacienteData {
             paciente.setIdPaciente(rs.getInt(1));
             JOptionPane.showMessageDialog(null, "Paciente guardado");
             
+        
+         
         }
         ps.close();
         
