@@ -18,29 +18,52 @@ public class Dieta {
     private LocalDate fechaI;
     private double pesoI;
     private double pesoF;
+    private double pesoA;
     private LocalDate fechaF;
+    private boolean estado;
 
     public Dieta() {
     }
 
-    public Dieta(String nombre, Paciente paciente, LocalDate fechaI, double pesoI, double pesoF, LocalDate fechaF) {
-        this.nombre = nombre;
-        this.paciente = paciente;
-        this.fechaI = fechaI;
-        this.pesoI = pesoI;
-        this.pesoF = pesoF;
-        this.fechaF = fechaF;
-    }
-
-    public Dieta(int idDieta, String nombre, Paciente paciente, LocalDate fechaI, double pesoI, double pesoF, LocalDate fechaF) {
+    public Dieta(int idDieta, String nombre, Paciente paciente, LocalDate fechaI, double pesoI, double pesoF, double pesoA, LocalDate fechaF, boolean estado) {
         this.idDieta = idDieta;
         this.nombre = nombre;
         this.paciente = paciente;
         this.fechaI = fechaI;
         this.pesoI = pesoI;
         this.pesoF = pesoF;
+        this.pesoA = pesoA;
         this.fechaF = fechaF;
+        this.estado = estado;
     }
+
+    public Dieta(String nombre, Paciente paciente, LocalDate fechaI, double pesoI, double pesoF, double pesoA, LocalDate fechaF, boolean estado) {
+        this.nombre = nombre;
+        this.paciente = paciente;
+        this.fechaI = fechaI;
+        this.pesoI = pesoI;
+        this.pesoF = pesoF;
+        this.pesoA = pesoA;
+        this.fechaF = fechaF;
+        this.estado = estado;
+    }
+
+    public double getPesoA() {
+        return pesoA;
+    }
+
+    public void setPesoA(double pesoA) {
+        this.pesoA = pesoA;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
 
     public int getIdDieta() {
         return idDieta;

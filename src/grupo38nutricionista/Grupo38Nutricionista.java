@@ -5,8 +5,10 @@
  */
 package grupo38nutricionista;
 
+import Conexiones.ComidaData;
 import Conexiones.Conexion;
 import Conexiones.PacienteData;
+import Entidades.Comida;
 import Entidades.Paciente;
 import java.sql.Connection;
 import java.util.logging.Level;
@@ -23,12 +25,12 @@ public class Grupo38Nutricionista {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        try {
-            Class.forName("org.mariadb.jdbc.Driver");
-        } catch (ClassNotFoundException ex) {
-             JOptionPane.showMessageDialog(null, "Error al cargar Driver " + ex.getMessage());
-        }
-        Connection con=Conexion.getConexion();
+//        try {
+//            Class.forName("org.mariadb.jdbc.Driver");
+//        } catch (ClassNotFoundException ex) {
+//             JOptionPane.showMessageDialog(null, "Error al cargar Driver " + ex.getMessage());
+//        }
+//        Connection con=Conexion.getConexion();
         
         //PACIENTE
         
@@ -49,7 +51,16 @@ public class Grupo38Nutricionista {
        //     System.out.println(paciente.getDomicilio());
        //     System.out.println(paciente.getTelefono());
       
-      
+      ///COMIDA
+      //ComidaData cd=new ComidaData();
+//      Comida comi =new Comida("pan","cena",550.0);
+//      cd.GuardarComida(comi);
+
+        Paciente pac=new Paciente("Prueba",1111111,"Pruebita 1111",1511111111);
+        PacienteData pd=new PacienteData();
+       // pd.guardarPaciente(pac);
+        
+       System.out.println("hola"+pd.buscarPaciente(1).getNombre());
     }
     
 }

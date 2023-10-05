@@ -5,8 +5,12 @@
  */
 package Vistas;
 
+import Conexiones.ComidaData;
 import Conexiones.PacienteData;
+import Entidades.Comida;
 import Entidades.Paciente;
+import java.util.HashSet;
+import java.util.Set;
 import javax.swing.JOptionPane;
 
 /**
@@ -42,26 +46,26 @@ public class Inicio extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jbSalir = new javax.swing.JButton();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel2 = new javax.swing.JPanel();
+        PanelContendor = new javax.swing.JTabbedPane();
+        PanelComida = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jtIdComida = new javax.swing.JTextField();
+        jbBuscarComida = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jButton6 = new javax.swing.JButton();
+        jtNombreComida = new javax.swing.JTextField();
+        jtCal = new javax.swing.JTextField();
+        jbGuardarComida = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        jrCena = new javax.swing.JRadioButton();
+        jrDesayuno = new javax.swing.JRadioButton();
+        jrAlmuerzo = new javax.swing.JRadioButton();
+        jrMerienda = new javax.swing.JRadioButton();
+        jrPostre = new javax.swing.JRadioButton();
         jPanel13 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jButton19 = new javax.swing.JButton();
@@ -70,7 +74,7 @@ public class Inicio extends javax.swing.JFrame {
         jButton20 = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
-        jPanel8 = new javax.swing.JPanel();
+        PanelCliente = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         JtDniP = new javax.swing.JTextField();
@@ -97,7 +101,7 @@ public class Inicio extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jList2 = new javax.swing.JList<>();
-        jPanel4 = new javax.swing.JPanel();
+        PanelDieta = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
@@ -158,6 +162,11 @@ public class Inicio extends javax.swing.JFrame {
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jToolBar1.add(jButton2);
 
         jButton3.setBackground(new java.awt.Color(255, 153, 153));
@@ -168,6 +177,11 @@ public class Inicio extends javax.swing.JFrame {
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jToolBar1.add(jButton3);
 
         jButton4.setBackground(new java.awt.Color(255, 153, 153));
@@ -178,6 +192,11 @@ public class Inicio extends javax.swing.JFrame {
         jButton4.setFocusable(false);
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jToolBar1.add(jButton4);
 
         jButton5.setBackground(new java.awt.Color(255, 153, 153));
@@ -216,10 +235,11 @@ public class Inicio extends javax.swing.JFrame {
             .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.setBackground(new java.awt.Color(255, 153, 153));
-        jTabbedPane1.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
+        PanelContendor.setBackground(new java.awt.Color(255, 153, 153));
+        PanelContendor.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
+        PanelContendor.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
 
-        jPanel2.setBackground(new java.awt.Color(255, 153, 153));
+        PanelComida.setBackground(new java.awt.Color(255, 153, 153));
 
         jPanel6.setBackground(new java.awt.Color(255, 204, 204));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -227,16 +247,21 @@ public class Inicio extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(255, 153, 153));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel1.setText("Comida");
+        jLabel1.setText("Código");
 
-        jTextField1.setBackground(new java.awt.Color(255, 204, 204));
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 51, 51));
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jtIdComida.setBackground(new java.awt.Color(255, 204, 204));
+        jtIdComida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jtIdComida.setForeground(new java.awt.Color(255, 51, 51));
+        jtIdComida.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
-        jButton1.setBackground(new java.awt.Color(255, 204, 204));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/9004811_search_find_magnifier_zoom_icon.png"))); // NOI18N
-        jButton1.setBorder(null);
+        jbBuscarComida.setBackground(new java.awt.Color(255, 204, 204));
+        jbBuscarComida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/9004811_search_find_magnifier_zoom_icon.png"))); // NOI18N
+        jbBuscarComida.setBorder(null);
+        jbBuscarComida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBuscarComidaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -246,9 +271,9 @@ public class Inicio extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jtIdComida, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(jbBuscarComida)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -257,8 +282,8 @@ public class Inicio extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(jtIdComida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbBuscarComida))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
 
@@ -280,24 +305,29 @@ public class Inicio extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 51, 51));
         jLabel5.setText("Características:");
 
-        jTextField2.setBackground(new java.awt.Color(255, 204, 204));
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 51, 51));
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jtNombreComida.setBackground(new java.awt.Color(255, 204, 204));
+        jtNombreComida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jtNombreComida.setForeground(new java.awt.Color(255, 51, 51));
+        jtNombreComida.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
-        jTextField3.setBackground(new java.awt.Color(255, 204, 204));
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(255, 51, 51));
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jtCal.setBackground(new java.awt.Color(255, 204, 204));
+        jtCal.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jtCal.setForeground(new java.awt.Color(255, 51, 51));
+        jtCal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
-        jButton6.setBackground(new java.awt.Color(255, 153, 153));
-        jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/85542_guardar_save_icon.png"))); // NOI18N
-        jButton6.setText("Guardar");
-        jButton6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jButton6.setFocusable(false);
-        jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbGuardarComida.setBackground(new java.awt.Color(255, 153, 153));
+        jbGuardarComida.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jbGuardarComida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/85542_guardar_save_icon.png"))); // NOI18N
+        jbGuardarComida.setText("Guardar");
+        jbGuardarComida.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jbGuardarComida.setFocusable(false);
+        jbGuardarComida.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbGuardarComida.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbGuardarComida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbGuardarComidaActionPerformed(evt);
+            }
+        });
 
         jButton7.setBackground(new java.awt.Color(255, 153, 153));
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -317,33 +347,33 @@ public class Inicio extends javax.swing.JFrame {
         jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        jRadioButton2.setBackground(new java.awt.Color(255, 204, 204));
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jRadioButton2.setText("Cena");
+        jrCena.setBackground(new java.awt.Color(255, 204, 204));
+        buttonGroup1.add(jrCena);
+        jrCena.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jrCena.setText("Cena");
 
-        jRadioButton3.setBackground(new java.awt.Color(255, 204, 204));
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jRadioButton3.setText("Desayuno");
+        jrDesayuno.setBackground(new java.awt.Color(255, 204, 204));
+        buttonGroup1.add(jrDesayuno);
+        jrDesayuno.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jrDesayuno.setText("Desayuno");
 
-        jRadioButton4.setBackground(new java.awt.Color(255, 204, 204));
-        buttonGroup1.add(jRadioButton4);
-        jRadioButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jRadioButton4.setText("Almuerzo");
+        jrAlmuerzo.setBackground(new java.awt.Color(255, 204, 204));
+        buttonGroup1.add(jrAlmuerzo);
+        jrAlmuerzo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jrAlmuerzo.setText("Almuerzo");
 
-        jRadioButton5.setBackground(new java.awt.Color(255, 204, 204));
-        buttonGroup1.add(jRadioButton5);
-        jRadioButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jRadioButton5.setText("Merienda");
+        jrMerienda.setBackground(new java.awt.Color(255, 204, 204));
+        buttonGroup1.add(jrMerienda);
+        jrMerienda.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jrMerienda.setText("Merienda");
 
-        jRadioButton6.setBackground(new java.awt.Color(255, 204, 204));
-        buttonGroup1.add(jRadioButton6);
-        jRadioButton6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jRadioButton6.setText("Postres");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+        jrPostre.setBackground(new java.awt.Color(255, 204, 204));
+        buttonGroup1.add(jrPostre);
+        jrPostre.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jrPostre.setText("Postres");
+        jrPostre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
+                jrPostreActionPerformed(evt);
             }
         });
 
@@ -354,10 +384,10 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE)
-                    .addComponent(jTextField2)
+                    .addComponent(jtCal, javax.swing.GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE)
+                    .addComponent(jtNombreComida)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbGuardarComida, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
                         .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -368,11 +398,11 @@ public class Inicio extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addGap(43, 43, 43)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton4)
-                            .addComponent(jRadioButton3)
-                            .addComponent(jRadioButton2)
-                            .addComponent(jRadioButton6)
-                            .addComponent(jRadioButton5))))
+                            .addComponent(jrAlmuerzo)
+                            .addComponent(jrDesayuno)
+                            .addComponent(jrCena)
+                            .addComponent(jrPostre)
+                            .addComponent(jrMerienda))))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -381,28 +411,28 @@ public class Inicio extends javax.swing.JFrame {
                 .addGap(51, 51, 51)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jtNombreComida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jtCal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jRadioButton3))
+                    .addComponent(jrDesayuno))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton4)
+                .addComponent(jrAlmuerzo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton5)
+                .addComponent(jrMerienda)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton2)
+                .addComponent(jrCena)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton6)
+                .addComponent(jrPostre)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jbGuardarComida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(34, 34, 34))
         );
 
@@ -480,30 +510,30 @@ public class Inicio extends javax.swing.JFrame {
                 .addGap(23, 23, 23))
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout PanelComidaLayout = new javax.swing.GroupLayout(PanelComida);
+        PanelComida.setLayout(PanelComidaLayout);
+        PanelComidaLayout.setHorizontalGroup(
+            PanelComidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(PanelComidaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22)
                 .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        PanelComidaLayout.setVerticalGroup(
+            PanelComidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelComidaLayout.createSequentialGroup()
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PanelComidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        jTabbedPane1.addTab("tab1", jPanel2);
+        PanelContendor.addTab("", PanelComida);
 
-        jPanel8.setBackground(new java.awt.Color(255, 153, 153));
+        PanelCliente.setBackground(new java.awt.Color(255, 153, 153));
 
         jPanel9.setBackground(new java.awt.Color(255, 204, 204));
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -791,29 +821,29 @@ public class Inicio extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout PanelClienteLayout = new javax.swing.GroupLayout(PanelCliente);
+        PanelCliente.setLayout(PanelClienteLayout);
+        PanelClienteLayout.setHorizontalGroup(
+            PanelClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel8Layout.createSequentialGroup()
+            .addGroup(PanelClienteLayout.createSequentialGroup()
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
+        PanelClienteLayout.setVerticalGroup(
+            PanelClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelClienteLayout.createSequentialGroup()
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PanelClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        jTabbedPane1.addTab("tab1", jPanel8);
+        PanelContendor.addTab("", PanelCliente);
 
-        jPanel4.setBackground(new java.awt.Color(255, 153, 153));
+        PanelDieta.setBackground(new java.awt.Color(255, 153, 153));
 
         jPanel11.setBackground(new java.awt.Color(255, 204, 204));
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -1077,41 +1107,41 @@ public class Inicio extends javax.swing.JFrame {
 
         jPanel5.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 484, 80));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout PanelDietaLayout = new javax.swing.GroupLayout(PanelDieta);
+        PanelDieta.setLayout(PanelDietaLayout);
+        PanelDietaLayout.setHorizontalGroup(
+            PanelDietaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+            .addGroup(PanelDietaLayout.createSequentialGroup()
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        PanelDietaLayout.setVerticalGroup(
+            PanelDietaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelDietaLayout.createSequentialGroup()
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PanelDietaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        jTabbedPane1.addTab("tab1", jPanel4);
+        PanelContendor.addTab("", PanelDieta);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jTabbedPane1)
+            .addComponent(PanelContendor)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jTabbedPane1))
+                .addComponent(PanelContendor))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1140,9 +1170,9 @@ public class Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTDomicActionPerformed
 
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+    private void jrPostreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrPostreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
+    }//GEN-LAST:event_jrPostreActionPerformed
 
     private void JtDniPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JtDniPKeyTyped
         int val = evt.getKeyChar();
@@ -1183,6 +1213,69 @@ public class Inicio extends javax.swing.JFrame {
        pd.eliminarPaciente(id);
     }//GEN-LAST:event_jBElimiPActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        PanelContendor.setSelectedComponent(PanelComida);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        PanelContendor.setSelectedComponent(PanelCliente);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        PanelContendor.setSelectedComponent(PanelDieta);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jbGuardarComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarComidaActionPerformed
+        // TODO add your handling code here:
+        Comida com =new Comida();
+        ComidaData cd=new ComidaData();
+       
+            
+        
+        com.setCalorias(Double.parseDouble(jtCal.getText()));
+        com.setNombre(jtNombreComida.getText());
+        if(jrDesayuno.isSelected()){
+            com.setDetalle("Desayuno");       
+        }else if(jrAlmuerzo.isSelected()){
+            com.setDetalle("Almuerzo");
+        }else if(jrMerienda.isSelected()){
+            com.setDetalle("Merienda");
+        }else if(jrCena.isSelected()){
+            com.setDetalle("Cena");
+        }else if(jrPostre.isSelected()){
+            com.setDetalle("Postre");
+        }else{
+            JOptionPane.showMessageDialog(null, "Debe seleccionar una opcion");
+        }
+        cd.GuardarComida(com);
+        jtNombreComida.setText("");
+        jtCal.setText("");
+        
+    }//GEN-LAST:event_jbGuardarComidaActionPerformed
+
+    private void jbBuscarComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarComidaActionPerformed
+
+       int id=Integer.parseInt(jtIdComida.getText());
+       ComidaData cd=new ComidaData();
+       Comida co=cd.BuscarComidaID(id);
+       jtCal.setText(""+co.getCalorias());
+       jtNombreComida.setText(co.getNombre());
+       if(co.getDetalle().equals("Desayuno")){
+           jrDesayuno.setSelected(true);
+       }else if(co.getDetalle().equals("Almuerzo")){
+           jrAlmuerzo.setSelected(true);
+       }else if(co.getDetalle().equals("Merienda")){
+           jrMerienda.setSelected(true);
+       }else if(co.getDetalle().equals("Cena")){
+           jrCena.setSelected(true);   
+       }else{
+           jrPostre.setSelected(true);
+       }
+    }//GEN-LAST:event_jbBuscarComidaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1221,11 +1314,14 @@ public class Inicio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField JTTel;
     private javax.swing.JTextField JtDniP;
+    private javax.swing.JPanel PanelCliente;
+    private javax.swing.JPanel PanelComida;
+    private javax.swing.JTabbedPane PanelContendor;
+    private javax.swing.JPanel PanelDieta;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jBElimiP;
     private javax.swing.JButton jBGuardarP;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
@@ -1237,7 +1333,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
@@ -1283,20 +1378,12 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -1307,8 +1394,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JTextField jTDomic;
     private javax.swing.JTextField jTIdP;
     private javax.swing.JTextField jTNombre;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
@@ -1317,11 +1402,19 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JToolBar jToolBar1;
+    private javax.swing.JButton jbBuscarComida;
+    private javax.swing.JButton jbGuardarComida;
     private javax.swing.JButton jbSalir;
+    private javax.swing.JRadioButton jrAlmuerzo;
+    private javax.swing.JRadioButton jrCena;
+    private javax.swing.JRadioButton jrDesayuno;
+    private javax.swing.JRadioButton jrMerienda;
+    private javax.swing.JRadioButton jrPostre;
+    private javax.swing.JTextField jtCal;
+    private javax.swing.JTextField jtIdComida;
+    private javax.swing.JTextField jtNombreComida;
     // End of variables declaration//GEN-END:variables
 }

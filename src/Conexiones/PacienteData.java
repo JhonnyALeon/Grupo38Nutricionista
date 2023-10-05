@@ -46,6 +46,7 @@ public class PacienteData {
             paciente.setIdPaciente(rs.getInt(1));
             JOptionPane.showMessageDialog(null, "Paciente guardado");
             
+            
         
          
         }
@@ -95,7 +96,7 @@ public class PacienteData {
         }
        
         }
-        public void buscarPaciente(int id){
+    public Paciente buscarPaciente(int id){
             String sql= "SELECT nombre , dni , domicilio , telefono FROM paciente WHERE idPaciente=?";
             Paciente paciente = null;
             
@@ -122,7 +123,7 @@ public class PacienteData {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla de datos");
         }
-        
+        return paciente;
         }
         public Paciente buscarPorDni (int dni){
             String sql= "SELECT idPaciente , nombre ,dni ,domicilio ,telefono FROM paciente WHERE dni=?";
