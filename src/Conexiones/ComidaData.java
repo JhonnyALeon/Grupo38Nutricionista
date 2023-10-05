@@ -50,7 +50,7 @@ public class ComidaData {
     
     public Comida BuscarComidaID(int id){
         
-        String sql = " SELECT nombre, detalle, calorias, FROM comida WHERE idComida = ? ";
+        String sql = " SELECT * FROM comida WHERE idComida = ? ";
         Comida comi=null;
         
         try {
