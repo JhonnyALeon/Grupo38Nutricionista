@@ -1511,7 +1511,8 @@ public class Inicio extends javax.swing.JFrame {
 
     private void jbAddComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAddComidaActionPerformed
         // TODO add your handling code here:
-        AddComida ac=new AddComida();
+        int idDieta=Integer.parseInt(jtIDDieta.getText());
+        AddComida ac=new AddComida( );
         ac.setVisible(true);
     }//GEN-LAST:event_jbAddComidaActionPerformed
 
