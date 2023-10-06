@@ -52,15 +52,15 @@ public class Grupo38Nutricionista {
        //     System.out.println(paciente.getTelefono());
       
       ///COMIDA
-      //ComidaData cd=new ComidaData();
-//      Comida comi =new Comida("pan","cena",550.0);
-//      cd.GuardarComida(comi);
+    ComidaData cd=new ComidaData();
+    Comida comi =new Comida("pan","cena",500.0,4);
+      cd.ModificarComida(comi);
 
-    Paciente pac=new Paciente("Prueba",1111111,"Pruebita 1111",1511111111);
-    PacienteData pd=new PacienteData();
-   // pd.guardarPaciente(pac);
-
-   System.out.println("hola"+pd.buscarPaciente(1).getNombre());
+//    Paciente pac=new Paciente("Prueba",1111111,"Pruebita 1111",1511111111);
+//    PacienteData pd=new PacienteData();
+//   // pd.guardarPaciente(pac);
+//
+//   System.out.println("hola"+pd.buscarPaciente(1).getNombre());
     }
     
 }

@@ -8,10 +8,11 @@ package Entidades;
 /**
  *
  * @author ElAgussYogur
+ * 
  */
 public class DietaComida {
     
-     private Comida comida;
+    private Comida comida;
     private int idDietaComida;
     private Dieta dieta;
 
