@@ -25,7 +25,8 @@ import javax.swing.table.DefaultTableModel;
  * @author jonat
  */
 public class Inicio extends javax.swing.JFrame {
-    private DefaultListModel mod= new DefaultListModel();
+
+    private DefaultListModel mod = new DefaultListModel();
 
     /**
      * Creates new form Inicio
@@ -47,6 +48,7 @@ public class Inicio extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
         jPanel3 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jToolBar1 = new javax.swing.JToolBar();
@@ -139,8 +141,8 @@ public class Inicio extends javax.swing.JFrame {
         jbEliminarDieta = new javax.swing.JButton();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
-        jdFechaInicio = new com.toedter.calendar.JDateChooser();
         jdFechaFin = new com.toedter.calendar.JDateChooser();
+        jdFechaInicio = new com.toedter.calendar.JDateChooser();
         jPanel5 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
@@ -158,6 +160,29 @@ public class Inicio extends javax.swing.JFrame {
         jList6 = new javax.swing.JList<>();
         jScrollPane8 = new javax.swing.JScrollPane();
         jList7 = new javax.swing.JList<>();
+        PanelCalculadora = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        r1 = new javax.swing.JRadioButton();
+        r2 = new javax.swing.JRadioButton();
+        r3 = new javax.swing.JRadioButton();
+        r4 = new javax.swing.JRadioButton();
+        r5 = new javax.swing.JRadioButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtReceta = new javax.swing.JTextArea();
+        jPanel16 = new javax.swing.JPanel();
+        jLabel49 = new javax.swing.JLabel();
+        jtPeso1 = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        jtAltura1 = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
+        jLabel35 = new javax.swing.JLabel();
+        jtMasa1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -283,7 +308,7 @@ public class Inicio extends javax.swing.JFrame {
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 1361, Short.MAX_VALUE)
+            .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 1376, Short.MAX_VALUE)
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -338,7 +363,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(jtIdComida, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbBuscarComida)
-                .addContainerGap(878, Short.MAX_VALUE))
+                .addContainerGap(890, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -566,7 +591,7 @@ public class Inicio extends javax.swing.JFrame {
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addGap(0, 28, Short.MAX_VALUE)
+                .addGap(0, 34, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 676, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26))
             .addGroup(jPanel13Layout.createSequentialGroup()
@@ -661,7 +686,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(JtDniP, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton9)
-                .addContainerGap(818, Short.MAX_VALUE))
+                .addContainerGap(830, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1117,14 +1142,8 @@ public class Inicio extends javax.swing.JFrame {
         jLabel31.setForeground(new java.awt.Color(255, 51, 51));
         jLabel31.setText("Inicio:");
         jPanel12.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
-
-        jdFechaInicio.setBackground(new java.awt.Color(255, 204, 204));
-        jdFechaInicio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel12.add(jdFechaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 350, 460, -1));
-
-        jdFechaFin.setBackground(new java.awt.Color(255, 204, 204));
-        jdFechaFin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel12.add(jdFechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 460, -1));
+        jPanel12.add(jdFechaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 460, -1));
 
         jPanel5.setBackground(new java.awt.Color(255, 204, 204));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -1241,7 +1260,7 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(PanelDietaLayout.createSequentialGroup()
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE))
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE))
         );
         PanelDietaLayout.setVerticalGroup(
             PanelDietaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1254,6 +1273,254 @@ public class Inicio extends javax.swing.JFrame {
         );
 
         PanelContendor.addTab("", PanelDieta);
+
+        PanelCalculadora.setBackground(new java.awt.Color(255, 153, 153));
+
+        jPanel15.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        jLabel36.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel36.setText("Formula IMC");
+
+        jLabel32.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel32.setText("Bajo: menos de 18.5");
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel33.setText("Normal: 18.5 - 24.9");
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel37.setText("Sobrepeso: 25.0 - 29.9");
+
+        jLabel38.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel38.setText("Obesidad I: 30.0 - 34.9");
+
+        jLabel39.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel39.setText("Obesidad II: 35.0 - 39.9");
+
+        buttonGroup3.add(r1);
+        r1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        r1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r1ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup3.add(r2);
+        r2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r2ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup3.add(r3);
+        r3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r3ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup3.add(r4);
+
+        buttonGroup3.add(r5);
+        r5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r5ActionPerformed(evt);
+            }
+        });
+
+        jtReceta.setBackground(new java.awt.Color(255, 153, 153));
+        jtReceta.setColumns(20);
+        jtReceta.setRows(5);
+        jtReceta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jScrollPane1.setViewportView(jtReceta);
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(252, 252, 252)
+                        .addComponent(jLabel36))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(75, 75, 75)
+                        .addComponent(r1))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)
+                        .addComponent(r2))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jLabel37)
+                        .addGap(93, 93, 93)
+                        .addComponent(r3))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(jPanel15Layout.createSequentialGroup()
+                                    .addComponent(jLabel39)
+                                    .addGap(114, 114, 114)
+                                    .addComponent(r5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel15Layout.createSequentialGroup()
+                                    .addComponent(jLabel38)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(r4)))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(58, Short.MAX_VALUE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(76, 76, 76)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel32)
+                    .addComponent(r1))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel33)
+                    .addComponent(r2))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel37)
+                    .addComponent(r3))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel38)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(r4)))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel39)
+                    .addComponent(r5))
+                .addGap(29, 29, 29)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel16.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        jLabel49.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel49.setText("Peso:");
+
+        jtPeso1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jtPeso1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jtPeso1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtPeso1ActionPerformed(evt);
+            }
+        });
+        jtPeso1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtPeso1KeyTyped(evt);
+            }
+        });
+
+        jLabel34.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel34.setText("Altura:");
+
+        jtAltura1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jtAltura1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jtAltura1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtAltura1ActionPerformed(evt);
+            }
+        });
+        jtAltura1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtAltura1KeyTyped(evt);
+            }
+        });
+
+        jButton6.setBackground(new java.awt.Color(255, 102, 102));
+        jButton6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton6.setText("Calcular");
+        jButton6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jLabel35.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel35.setText("Indice de Masa Corporal:");
+
+        jtMasa1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addComponent(jLabel49, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(529, 529, 529))
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel16Layout.createSequentialGroup()
+                                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jtAltura1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel35, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtPeso1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtMasa1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jtPeso1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69)
+                .addComponent(jLabel34)
+                .addGap(18, 18, 18)
+                .addComponent(jtAltura1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
+                .addComponent(jLabel35)
+                .addGap(18, 18, 18)
+                .addComponent(jtMasa1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PanelCalculadoraLayout = new javax.swing.GroupLayout(PanelCalculadora);
+        PanelCalculadora.setLayout(PanelCalculadoraLayout);
+        PanelCalculadoraLayout.setHorizontalGroup(
+            PanelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCalculadoraLayout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61))
+        );
+        PanelCalculadoraLayout.setVerticalGroup(
+            PanelCalculadoraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        PanelContendor.addTab("", PanelCalculadora);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -1302,41 +1569,41 @@ public class Inicio extends javax.swing.JFrame {
 
     private void JtDniPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JtDniPKeyTyped
         int val = evt.getKeyChar();
-        boolean acep= val>=48 && val<=57;
-        if(!acep){
+        boolean acep = val >= 48 && val <= 57;
+        if (!acep) {
             evt.consume();
         }
     }//GEN-LAST:event_JtDniPKeyTyped
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        
-        int dni=Integer.parseInt(JtDniP.getText());
-        
+
+        int dni = Integer.parseInt(JtDniP.getText());
+
         PacienteData pd = new PacienteData();
-        Paciente pac=pd.buscarPorDni(dni);
+        Paciente pac = pd.buscarPorDni(dni);
         jTIdP.setText("" + pac.getIdPaciente());
         jTNombre.setText(pac.getNombre());
         jTDomic.setText(pac.getDomicilio());
         JTTel.setText("" + pac.getTelefono());
-       
+
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jBGuardarPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarPActionPerformed
         Paciente pac = new Paciente();
-        PacienteData pd= new PacienteData();
+        PacienteData pd = new PacienteData();
         pac.setDni(Integer.parseInt(JtDniP.getText()));
         pac.setDomicilio(jTDomic.getText());
         pac.setNombre(jTNombre.getText());
         pac.setTelefono(Integer.parseInt(JTTel.getText()));
         pd.guardarPaciente(pac);
-        
-        
+
+
     }//GEN-LAST:event_jBGuardarPActionPerformed
 
     private void jBElimiPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBElimiPActionPerformed
-       int id= Integer.parseInt(jTIdP.getText());
-       PacienteData pd = new PacienteData();
-       pd.eliminarPaciente(id);
+        int id = Integer.parseInt(jTIdP.getText());
+        PacienteData pd = new PacienteData();
+        pd.eliminarPaciente(id);
     }//GEN-LAST:event_jBElimiPActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -1356,98 +1623,98 @@ public class Inicio extends javax.swing.JFrame {
 
     private void jbGuardarComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarComidaActionPerformed
         // TODO add your handling code here:
-        Comida com =new Comida();
-        ComidaData cd=new ComidaData();
-       
-            
-        
+        Comida com = new Comida();
+        ComidaData cd = new ComidaData();
+
         com.setCalorias(Double.parseDouble(jtCal.getText()));
         com.setNombre(jtNombreComida.getText());
-        if(jrDesayuno.isSelected()){
-            com.setDetalle("Desayuno");       
-        }else if(jrAlmuerzo.isSelected()){
+        if (jrDesayuno.isSelected()) {
+            com.setDetalle("Desayuno");
+        } else if (jrAlmuerzo.isSelected()) {
             com.setDetalle("Almuerzo");
-        }else if(jrMerienda.isSelected()){
+        } else if (jrMerienda.isSelected()) {
             com.setDetalle("Merienda");
-        }else if(jrCena.isSelected()){
+        } else if (jrCena.isSelected()) {
             com.setDetalle("Cena");
-        }else if(jrPostre.isSelected()){
+        } else if (jrPostre.isSelected()) {
             com.setDetalle("Postre");
-        }else{
+        } else {
             JOptionPane.showMessageDialog(null, "Debe seleccionar una opcion");
         }
         cd.GuardarComida(com);
         jtNombreComida.setText("");
         jtCal.setText("");
-        
+
     }//GEN-LAST:event_jbGuardarComidaActionPerformed
 
     private void jbBuscarComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarComidaActionPerformed
 
-       int id=Integer.parseInt(jtIdComida.getText());
-       ComidaData cd=new ComidaData();
-       Comida co=cd.BuscarComidaID(id);
-       jtCal.setText(""+co.getCalorias());
-       jtNombreComida.setText(co.getNombre());
-       if(co.getDetalle().equals("Desayuno")){
-           jrDesayuno.setSelected(true);
-       }else if(co.getDetalle().equals("Almuerzo")){
-           jrAlmuerzo.setSelected(true);
-       }else if(co.getDetalle().equals("Merienda")){
-           jrMerienda.setSelected(true);
-       }else if(co.getDetalle().equals("Cena")){
-           jrCena.setSelected(true);   
-       }else{
-           jrPostre.setSelected(true);
-       }
+        int id = Integer.parseInt(jtIdComida.getText());
+        ComidaData cd = new ComidaData();
+        Comida co = cd.BuscarComidaID(id);
+        jtCal.setText("" + co.getCalorias());
+        jtNombreComida.setText(co.getNombre());
+        if (co.getDetalle().equals("Desayuno")) {
+            jrDesayuno.setSelected(true);
+        } else if (co.getDetalle().equals("Almuerzo")) {
+            jrAlmuerzo.setSelected(true);
+        } else if (co.getDetalle().equals("Merienda")) {
+            jrMerienda.setSelected(true);
+        } else if (co.getDetalle().equals("Cena")) {
+            jrCena.setSelected(true);
+        } else {
+            jrPostre.setSelected(true);
+        }
     }//GEN-LAST:event_jbBuscarComidaActionPerformed
 
     private void jbMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMenosActionPerformed
         // TODO add your handling code here:
         mod.removeAllElements();
-        int cal=Integer.parseInt(jtCantCal.getText());
-        ComidaData cd=new ComidaData();
-        List<Comida> comidas=cd.MenosCalorias(cal);
+        int cal = Integer.parseInt(jtCantCal.getText());
+        ComidaData cd = new ComidaData();
+        List<Comida> comidas = cd.MenosCalorias(cal);
         for (int i = 0; i < comidas.size(); i++) {
             mod.addElement(comidas.get(i));
         }
-            
-        
+
+
     }//GEN-LAST:event_jbMenosActionPerformed
 
     private void jbMasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMasActionPerformed
         mod.removeAllElements();
-        int cal=Integer.parseInt(jtCantCal.getText());
-        ComidaData cd=new ComidaData();
-        List<Comida> comidas=cd.MasCalorias(cal);
+        int cal = Integer.parseInt(jtCantCal.getText());
+        ComidaData cd = new ComidaData();
+        List<Comida> comidas = cd.MasCalorias(cal);
         for (int i = 0; i < comidas.size(); i++) {
             mod.addElement(comidas.get(i));
         }
     }//GEN-LAST:event_jbMasActionPerformed
 
     private void jbCalcularMasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCalcularMasaActionPerformed
-        // TODO add your handling code here:
+
+        PanelContendor.setSelectedComponent(PanelCalculadora);
+
+
     }//GEN-LAST:event_jbCalcularMasaActionPerformed
 
     private void jbModificarComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbModificarComidaActionPerformed
-        Comida com =new Comida();
-        ComidaData cd=new ComidaData();
-       
-            
+        Comida com = new Comida();
+        ComidaData cd = new ComidaData();
+
         com.setIdComida(Integer.parseInt(jtIdComida.getText()));
         com.setCalorias(Double.parseDouble(jtCal.getText()));
         com.setNombre(jtNombreComida.getText());
-        if(jrDesayuno.isSelected()){
-            com.setDetalle("Desayuno");       
-        }else if(jrAlmuerzo.isSelected()){
+        if (jrDesayuno.isSelected()) {
+            com.setDetalle("Desayuno");
+        } else if (jrAlmuerzo.isSelected()) {
             com.setDetalle("Almuerzo");
-        }else if(jrMerienda.isSelected()){
+        } else if (jrMerienda.isSelected()) {
             com.setDetalle("Merienda");
-        }else if(jrCena.isSelected()){
+        } else if (jrCena.isSelected()) {
             com.setDetalle("Cena");
-        }else if(jrPostre.isSelected()){
+        } else if (jrPostre.isSelected()) {
             com.setDetalle("Postre");
-        }else{
+        } else {
             JOptionPane.showMessageDialog(null, "Debe seleccionar una opcion");
         }
         cd.ModificarComida(com);
@@ -1456,46 +1723,46 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jbModificarComidaActionPerformed
 
     private void jbBuscarComidaNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarComidaNombreActionPerformed
-        
-        String nombre=jtNombreComida.getText();
-        ComidaData cd=new ComidaData();
-        Comida co=cd.BuscarComidaNombre(nombre);
-        jtCal.setText(""+co.getCalorias());
-       jtNombreComida.setText(co.getNombre());
-       if(co.getDetalle().equals("Desayuno")){
-           jrDesayuno.setSelected(true);
-       }else if(co.getDetalle().equals("Almuerzo")){
-           jrAlmuerzo.setSelected(true);
-       }else if(co.getDetalle().equals("Merienda")){
-           jrMerienda.setSelected(true);
-       }else if(co.getDetalle().equals("Cena")){
-           jrCena.setSelected(true);   
-       }else{
-           jrPostre.setSelected(true);
-       }
-       jtIdComida.setText(""+co.getIdComida());
-        
+
+        String nombre = jtNombreComida.getText();
+        ComidaData cd = new ComidaData();
+        Comida co = cd.BuscarComidaNombre(nombre);
+        jtCal.setText("" + co.getCalorias());
+        jtNombreComida.setText(co.getNombre());
+        if (co.getDetalle().equals("Desayuno")) {
+            jrDesayuno.setSelected(true);
+        } else if (co.getDetalle().equals("Almuerzo")) {
+            jrAlmuerzo.setSelected(true);
+        } else if (co.getDetalle().equals("Merienda")) {
+            jrMerienda.setSelected(true);
+        } else if (co.getDetalle().equals("Cena")) {
+            jrCena.setSelected(true);
+        } else {
+            jrPostre.setSelected(true);
+        }
+        jtIdComida.setText("" + co.getIdComida());
+
 
     }//GEN-LAST:event_jbBuscarComidaNombreActionPerformed
 
     private void jbBuscarDietaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarDietaActionPerformed
-        int dni=Integer.parseInt(jtDniPacDieta.getText());
-        DietaData dd=new DietaData();
-        Dieta dieta=dd.BuscarDieta(dni);
-        jtIDDieta.setText(""+dieta.getIdDieta());
+        int dni = Integer.parseInt(jtDniPacDieta.getText());
+        DietaData dd = new DietaData();
+        Dieta dieta = dd.BuscarDieta(dni);
+        jtIDDieta.setText("" + dieta.getIdDieta());
         jtPacNombre.setText(dieta.getPaciente().getNombre());
-        jtPesoIni.setText(""+dieta.getPesoI());
+        jtPesoIni.setText("" + dieta.getPesoI());
         jrEstado.setSelected(dieta.isEstado());
-        jtPesoActual.setText(""+dieta.getPesoA());
-        jtPesoIdeal.setText(""+dieta.getPesoI());
-        
+        jtPesoActual.setText("" + dieta.getPesoA());
+        jtPesoIdeal.setText("" + dieta.getPesoI());
+
     }//GEN-LAST:event_jbBuscarDietaActionPerformed
 
     private void jbGuardarDietaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarDietaActionPerformed
-        int dni= Integer.parseInt(jtDniPacDieta.getText());
-        PacienteData pd=new PacienteData();
-        Paciente pc=pd.buscarPorDni(dni);
-        Dieta dieta=new Dieta();
+        int dni = Integer.parseInt(jtDniPacDieta.getText());
+        PacienteData pd = new PacienteData();
+        Paciente pc = pd.buscarPorDni(dni);
+        Dieta dieta = new Dieta();
         dieta.setFechaI(jdFechaInicio.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
         dieta.setFechaF(jdFechaFin.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
         dieta.setEstado(jrEstado.isSelected());
@@ -1504,17 +1771,111 @@ public class Inicio extends javax.swing.JFrame {
         dieta.setPesoA(Double.parseDouble(jtPesoActual.getText()));
         dieta.setPesoF(Double.parseDouble(jtPesoIdeal.getText()));
         dieta.setPesoI(Double.parseDouble(jtPesoIni.getText()));
-        
-        DietaData dd=new DietaData();
+
+        DietaData dd = new DietaData();
         dd.GuardarDieta(dieta);
     }//GEN-LAST:event_jbGuardarDietaActionPerformed
 
     private void jbAddComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAddComidaActionPerformed
         // TODO add your handling code here:
-        int idDieta=Integer.parseInt(jtIDDieta.getText());
-        AddComida ac=new AddComida( );
+        int idDieta = Integer.parseInt(jtIDDieta.getText());
+        AddComida ac = new AddComida();
         ac.setVisible(true);
     }//GEN-LAST:event_jbAddComidaActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+
+        double A = Double.parseDouble(jtPeso1.getText());
+        double B = Double.parseDouble(jtAltura1.getText());
+        B = B * B;
+
+        String dieta = "";
+
+        jtMasa1.setText("" + A / B);
+
+        if (A / B < 18.5) {
+            r1.setSelected(true);
+            dieta = "Si su IMC es menos de 18.5, se encuentra dentro del rango de peso insuficiente. Si su IMC es entre 18.5 y 24.9, se encuentra dentro del rango de peso normal o saludable.";
+
+        } else if (A / B > 18.4 && A / B <= 24.9) {
+
+            r2.setSelected(true);
+            dieta = "dieta2";
+
+        } else if (A / B >= 25 && A / B <= 29.9) {
+
+            r3.setSelected(true);
+            dieta = "dieta3";
+
+        } else if (A / B >= 30 && A / B <= 34.9) {
+
+            r4.setSelected(true);
+            dieta = "dieta4";
+
+        } else if (A / B >= 35 && A / B <= 39.9) {
+
+            r5.setSelected(true);
+            dieta = "dieta5";
+
+        } else {
+
+            r5.setSelected(true);
+            dieta = "dieta5";
+        }
+
+        jtReceta.setText(dieta);
+
+
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jtAltura1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtAltura1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtAltura1ActionPerformed
+
+    private void jtPeso1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtPeso1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtPeso1ActionPerformed
+
+    private void r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_r1ActionPerformed
+
+    private void r5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_r5ActionPerformed
+
+    private void r3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_r3ActionPerformed
+
+    private void r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_r2ActionPerformed
+
+    private void jtPeso1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtPeso1KeyTyped
+
+        int val = evt.getKeyChar();
+
+        boolean ok = val >= 46 && val <= 57;
+
+        if (!ok) {
+            evt.consume();
+
+        }
+
+
+    }//GEN-LAST:event_jtPeso1KeyTyped
+
+    private void jtAltura1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtAltura1KeyTyped
+        int val = evt.getKeyChar();
+
+        boolean ok = val >= 46 && val <= 57;
+
+        if (!ok) {
+            evt.consume();
+
+        }
+    }//GEN-LAST:event_jtAltura1KeyTyped
 
     /**
      * @param args the command line arguments
@@ -1554,6 +1915,7 @@ public class Inicio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField JTTel;
     private javax.swing.JTextField JtDniP;
+    private javax.swing.JPanel PanelCalculadora;
     private javax.swing.JPanel PanelCliente;
     private javax.swing.JPanel PanelComida;
     private javax.swing.JTabbedPane PanelContendor;
@@ -1561,12 +1923,14 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel PanelEntrada;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JButton jBElimiP;
     private javax.swing.JButton jBGuardarP;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
@@ -1594,8 +1958,17 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1613,12 +1986,15 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -1655,15 +2031,24 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JRadioButton jrEstado;
     private javax.swing.JRadioButton jrMerienda;
     private javax.swing.JRadioButton jrPostre;
+    private javax.swing.JTextField jtAltura1;
     private javax.swing.JTextField jtCal;
     private javax.swing.JTextField jtCantCal;
     private javax.swing.JTextField jtDniPacDieta;
     private javax.swing.JTextField jtIDDieta;
     private javax.swing.JTextField jtIdComida;
+    private javax.swing.JLabel jtMasa1;
     private javax.swing.JTextField jtNombreComida;
     private javax.swing.JTextField jtPacNombre;
+    private javax.swing.JTextField jtPeso1;
     private javax.swing.JTextField jtPesoActual;
     private javax.swing.JTextField jtPesoIdeal;
     private javax.swing.JTextField jtPesoIni;
+    private javax.swing.JTextArea jtReceta;
+    private javax.swing.JRadioButton r1;
+    private javax.swing.JRadioButton r2;
+    private javax.swing.JRadioButton r3;
+    private javax.swing.JRadioButton r4;
+    private javax.swing.JRadioButton r5;
     // End of variables declaration//GEN-END:variables
 }
