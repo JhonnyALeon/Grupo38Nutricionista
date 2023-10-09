@@ -1316,7 +1316,8 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         jtReceta.setBackground(new java.awt.Color(255, 153, 153));
-        jtReceta.setColumns(20);
+        jtReceta.setColumns(6);
+        jtReceta.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jtReceta.setRows(5);
         jtReceta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jScrollPane1.setViewportView(jtReceta);
@@ -1328,67 +1329,69 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(252, 252, 252)
+                        .addGap(229, 229, 229)
                         .addComponent(jLabel36))
                     .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(75, 75, 75)
-                        .addComponent(r1))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(r2))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jLabel37)
-                        .addGap(93, 93, 93)
-                        .addComponent(r3))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGap(40, 40, 40)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(jPanel15Layout.createSequentialGroup()
-                                    .addComponent(jLabel39)
-                                    .addGap(114, 114, 114)
-                                    .addComponent(r5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel15Layout.createSequentialGroup()
-                                    .addComponent(jLabel38)
+                                    .addComponent(jLabel37)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(r4)))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(58, Short.MAX_VALUE))
+                                    .addComponent(r3))
+                                .addGroup(jPanel15Layout.createSequentialGroup()
+                                    .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(75, 75, 75)
+                                    .addComponent(r1))
+                                .addGroup(jPanel15Layout.createSequentialGroup()
+                                    .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(r2)))
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                                        .addComponent(jLabel38)
+                                        .addGap(93, 93, 93))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                                        .addComponent(jLabel39)
+                                        .addGap(84, 84, 84)))
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(r4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(r5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGap(67, 67, 67)
+                .addGap(17, 17, 17)
                 .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(76, 76, 76)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel32)
                     .addComponent(r1))
-                .addGap(26, 26, 26)
+                .addGap(29, 29, 29)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel33)
                     .addComponent(r2))
-                .addGap(27, 27, 27)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel37)
-                    .addComponent(r3))
-                .addGap(27, 27, 27)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel38)
+                .addGap(30, 30, 30)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
+                        .addComponent(jLabel37)
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel38))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addComponent(r3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(r4)))
-                .addGap(28, 28, 28)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel39)
                     .addComponent(r5))
-                .addGap(29, 29, 29)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -1826,32 +1829,30 @@ public class Inicio extends javax.swing.JFrame {
 
         if (A / B < 18.5) {
             r1.setSelected(true);
-            dieta = "Si su IMC es menos de 18.5, se encuentra dentro del rango de peso insuficiente. Si su IMC es entre 18.5 y 24.9, se encuentra dentro del rango de peso normal o saludable.";
+            dieta = "Sin riesgo pero con precaucion de no adelgazar mas. ";
 
         } else if (A / B > 18.4 && A / B <= 24.9) {
 
             r2.setSelected(true);
-            dieta = "dieta2";
+            dieta = "Estado saludable";
 
         } else if (A / B >= 25 && A / B <= 29.9) {
 
             r3.setSelected(true);
-            dieta = "dieta3";
+            dieta = "Sin riesgo pero con precaucion de no engordar mas.";
 
         } else if (A / B >= 30 && A / B <= 34.9) {
 
             r4.setSelected(true);
-            dieta = "dieta4";
-
-        } else if (A / B >= 35 && A / B <= 39.9) {
-
-            r5.setSelected(true);
-            dieta = "dieta5";
+            dieta = "Sobrecarga de articulaciones, cansancio "
+                    + "excesivo y cierto riesgo de enfermedades"
+                    + "cardiovasculares.";
 
         } else {
 
             r5.setSelected(true);
-            dieta = "dieta5";
+            dieta = "Problemas cardiacos, diabetes, hipertension, "
+                    + "enfermedad de vesicula y algunos canceres.";
         }
 
         jtReceta.setText(dieta);
