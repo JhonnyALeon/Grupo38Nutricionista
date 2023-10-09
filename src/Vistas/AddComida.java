@@ -8,6 +8,8 @@ package Vistas;
 import Conexiones.ComidaData;
 import Conexiones.DCData;
 import Entidades.Comida;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,8 +21,16 @@ public class AddComida extends javax.swing.JFrame {
     /**
      * Creates new form AddDieta
      */
+    private int idDieta;
+    
     public AddComida() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        
+    }
+    
+    public void setidDieta(int dato){
+        this.idDieta=dato;
     }
 
     /**
@@ -45,7 +55,7 @@ public class AddComida extends javax.swing.JFrame {
         jbBuscarComida = new javax.swing.JButton();
         jtNombre = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jbAdherir = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jlNombre = new javax.swing.JLabel();
@@ -58,6 +68,7 @@ public class AddComida extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(610, 850));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -135,16 +146,16 @@ public class AddComida extends javax.swing.JFrame {
         });
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 700, -1, -1));
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton3.setText("Adherir");
-        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jbAdherir.setBackground(new java.awt.Color(255, 255, 255));
+        jbAdherir.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jbAdherir.setText("Adherir");
+        jbAdherir.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jbAdherir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jbAdherirActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 700, 90, -1));
+        jPanel2.add(jbAdherir, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 700, 90, -1));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
@@ -246,7 +257,7 @@ public class AddComida extends javax.swing.JFrame {
             jlNombre.setText(comida.getNombre());
             jlCalorias.setText(""+comida.getCalorias());
             jlDetalle.setText(comida.getDetalle());
-            jlCodigo.setText(""+comida.getIdComida());
+            jlCodigo.setText(jtCodigo.getText());
         }else{
             JOptionPane.showMessageDialog(null, "Debe llenar al menos un campo");
         }
@@ -260,12 +271,13 @@ public class AddComida extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jbAdherirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAdherirActionPerformed
 
         int idComida=Integer.parseInt(jlCodigo.getText());
+        System.out.println(""+idDieta+" "+idComida);
         DCData dcd=new DCData();
-        //dcd.GuardarDietaComida(dieta, idComida);
-    }//GEN-LAST:event_jButton3ActionPerformed
+        dcd.GuardarDietaComida(idComida,idDieta);
+    }//GEN-LAST:event_jbAdherirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -302,10 +314,13 @@ public class AddComida extends javax.swing.JFrame {
             }
         });
     }
+    
+   
+        
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -320,6 +335,7 @@ public class AddComida extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JButton jbAdherir;
     private javax.swing.JButton jbBuscarComida;
     private javax.swing.JLabel jlCalorias;
     private javax.swing.JLabel jlCodigo;

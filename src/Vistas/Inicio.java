@@ -6,12 +6,14 @@
 package Vistas;
 
 import Conexiones.ComidaData;
+import Conexiones.DCData;
 import Conexiones.DietaData;
 import Conexiones.PacienteData;
 import Entidades.Comida;
 import Entidades.Dieta;
 import Entidades.Paciente;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -27,7 +29,12 @@ import javax.swing.table.DefaultTableModel;
 public class Inicio extends javax.swing.JFrame {
 
     private DefaultListModel mod = new DefaultListModel();
-
+    private DefaultListModel modDesayuno = new DefaultListModel();
+    private DefaultListModel modMerienda = new DefaultListModel();
+    private DefaultListModel modAlmuerzo = new DefaultListModel();
+    private DefaultListModel modCena = new DefaultListModel();
+    private DefaultListModel modPostre = new DefaultListModel();
+    
     /**
      * Creates new form Inicio
      */
@@ -35,6 +42,11 @@ public class Inicio extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         jlCalorias.setModel(mod);
+        jlDesayuno.setModel(modDesayuno);
+        jlMerienda.setModel(modMerienda);
+        jlAlmuerzo.setModel(modAlmuerzo);
+        jlCena.setModel(modCena);
+        jlPostre.setModel(modPostre);
     }
 
     /**
@@ -147,19 +159,19 @@ public class Inicio extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList<>();
+        jlDesayuno = new javax.swing.JList<>();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jList4 = new javax.swing.JList<>();
+        jlAlmuerzo = new javax.swing.JList<>();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jList5 = new javax.swing.JList<>();
+        jlMerienda = new javax.swing.JList<>();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jList6 = new javax.swing.JList<>();
+        jlPostre = new javax.swing.JList<>();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jList7 = new javax.swing.JList<>();
+        jlCena = new javax.swing.JList<>();
         PanelCalculadora = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
@@ -1163,16 +1175,11 @@ public class Inicio extends javax.swing.JFrame {
         jLabel25.setText("Régimen de comidas");
         jPanel5.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 28, 690, -1));
 
-        jList3.setBackground(new java.awt.Color(255, 204, 204));
-        jList3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jList3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jList3.setForeground(new java.awt.Color(255, 102, 102));
-        jList3.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(jList3);
+        jlDesayuno.setBackground(new java.awt.Color(255, 204, 204));
+        jlDesayuno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jlDesayuno.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jlDesayuno.setForeground(new java.awt.Color(255, 102, 102));
+        jScrollPane2.setViewportView(jlDesayuno);
 
         jPanel5.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 72, 484, 79));
 
@@ -1180,7 +1187,7 @@ public class Inicio extends javax.swing.JFrame {
         jLabel26.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(255, 51, 51));
         jLabel26.setText("Cena:");
-        jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
+        jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, -1, -1));
 
         jLabel27.setBackground(new java.awt.Color(255, 153, 153));
         jLabel27.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -1192,7 +1199,7 @@ public class Inicio extends javax.swing.JFrame {
         jLabel28.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 51, 51));
         jLabel28.setText("Merienda:");
-        jPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 271, -1, -1));
+        jPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
 
         jLabel29.setBackground(new java.awt.Color(255, 153, 153));
         jLabel29.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -1200,55 +1207,35 @@ public class Inicio extends javax.swing.JFrame {
         jLabel29.setText("Postres:");
         jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, -1, -1));
 
-        jList4.setBackground(new java.awt.Color(255, 204, 204));
-        jList4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jList4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jList4.setForeground(new java.awt.Color(255, 102, 102));
-        jList4.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane5.setViewportView(jList4);
+        jlAlmuerzo.setBackground(new java.awt.Color(255, 204, 204));
+        jlAlmuerzo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jlAlmuerzo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jlAlmuerzo.setForeground(new java.awt.Color(255, 102, 102));
+        jScrollPane5.setViewportView(jlAlmuerzo);
 
         jPanel5.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 175, 484, 79));
 
-        jList5.setBackground(new java.awt.Color(255, 204, 204));
-        jList5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jList5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jList5.setForeground(new java.awt.Color(255, 102, 102));
-        jList5.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane6.setViewportView(jList5);
+        jlMerienda.setBackground(new java.awt.Color(255, 204, 204));
+        jlMerienda.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jlMerienda.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jlMerienda.setForeground(new java.awt.Color(255, 102, 102));
+        jScrollPane6.setViewportView(jlMerienda);
 
         jPanel5.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 484, 81));
 
-        jList6.setBackground(new java.awt.Color(255, 204, 204));
-        jList6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jList6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jList6.setForeground(new java.awt.Color(255, 102, 102));
-        jList6.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane7.setViewportView(jList6);
+        jlPostre.setBackground(new java.awt.Color(255, 204, 204));
+        jlPostre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jlPostre.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jlPostre.setForeground(new java.awt.Color(255, 102, 102));
+        jScrollPane7.setViewportView(jlPostre);
 
         jPanel5.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 510, 484, 80));
 
-        jList7.setBackground(new java.awt.Color(255, 204, 204));
-        jList7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jList7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jList7.setForeground(new java.awt.Color(255, 102, 102));
-        jList7.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane8.setViewportView(jList7);
+        jlCena.setBackground(new java.awt.Color(255, 204, 204));
+        jlCena.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jlCena.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jlCena.setForeground(new java.awt.Color(255, 102, 102));
+        jScrollPane8.setViewportView(jlCena);
 
         jPanel5.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 484, 80));
 
@@ -1755,9 +1742,51 @@ public class Inicio extends javax.swing.JFrame {
         jrEstado.setSelected(dieta.isEstado());
         jtPesoActual.setText("" + dieta.getPesoA());
         jtPesoIdeal.setText("" + dieta.getPesoI());
+        
+        List<Comida>lista=BuscarComida(dieta.getIdDieta());
+        LimpiarListas();
+        for (Comida comida : lista) {
+            mostrarComida(comida);
+        }
+        
+        
 
     }//GEN-LAST:event_jbBuscarDietaActionPerformed
-
+ public List<Comida> BuscarComida(int idDieta){
+        ArrayList <Comida>comidas=new ArrayList<>();
+        ArrayList<Integer>idComi=new ArrayList<>();
+        DCData dcd=new DCData();
+        ComidaData cd=new ComidaData();        
+        
+        idComi=(ArrayList<Integer>) dcd.buscarComida(idDieta);
+        for (Integer idC : idComi) {
+            comidas.add(cd.BuscarComidaID(idC));
+        }
+        return comidas;
+    }
+ private void LimpiarListas(){
+        modDesayuno.removeAllElements();
+        modAlmuerzo.removeAllElements();
+        modMerienda.removeAllElements();
+        modCena.removeAllElements();
+        modPostre.removeAllElements();
+ }
+ private void mostrarComida(Comida comida){
+        
+     if(comida.getDetalle().equalsIgnoreCase("desayuno")){
+        
+        modDesayuno.addElement(comida);
+     }else if(comida.getDetalle().equalsIgnoreCase("Almuerzo")){
+         modAlmuerzo.addElement(comida);
+     }else if(comida.getDetalle().equalsIgnoreCase("Merienda")){
+         modMerienda.addElement(comida);
+     }else if(comida.getDetalle().equalsIgnoreCase("Cena")){
+         modCena.addElement(comida);
+     }else{
+         modPostre.addElement(comida);
+     }
+ }
+ 
     private void jbGuardarDietaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarDietaActionPerformed
         int dni = Integer.parseInt(jtDniPacDieta.getText());
         PacienteData pd = new PacienteData();
@@ -1780,6 +1809,8 @@ public class Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
         int idDieta = Integer.parseInt(jtIDDieta.getText());
         AddComida ac = new AddComida();
+        int idd=Integer.parseInt(jtIDDieta.getText());
+        ac.setidDieta(idd);
         ac.setVisible(true);
     }//GEN-LAST:event_jbAddComidaActionPerformed
 
@@ -1975,11 +2006,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList2;
-    private javax.swing.JList<String> jList3;
-    private javax.swing.JList<String> jList4;
-    private javax.swing.JList<String> jList5;
-    private javax.swing.JList<String> jList6;
-    private javax.swing.JList<String> jList7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -2024,7 +2050,12 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton jbSalir;
     private com.toedter.calendar.JDateChooser jdFechaFin;
     private com.toedter.calendar.JDateChooser jdFechaInicio;
+    private javax.swing.JList<String> jlAlmuerzo;
     private javax.swing.JList<String> jlCalorias;
+    private javax.swing.JList<String> jlCena;
+    private javax.swing.JList<String> jlDesayuno;
+    private javax.swing.JList<String> jlMerienda;
+    private javax.swing.JList<String> jlPostre;
     private javax.swing.JRadioButton jrAlmuerzo;
     private javax.swing.JRadioButton jrCena;
     private javax.swing.JRadioButton jrDesayuno;
