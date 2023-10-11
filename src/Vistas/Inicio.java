@@ -122,6 +122,7 @@ public class Inicio extends javax.swing.JFrame {
         jBElimiP = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         JTTel = new javax.swing.JTextField();
+        jbModificarP = new javax.swing.JButton();
         jPanel14 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jtPeso2 = new javax.swing.JTextField();
@@ -157,8 +158,8 @@ public class Inicio extends javax.swing.JFrame {
         jbEliminarDieta = new javax.swing.JButton();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
-        jdFechaFin = new com.toedter.calendar.JDateChooser();
         jdFechaInicio = new com.toedter.calendar.JDateChooser();
+        jdFechaFin = new com.toedter.calendar.JDateChooser();
         jPanel5 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
@@ -823,6 +824,20 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
+        jbModificarP.setBackground(new java.awt.Color(255, 153, 153));
+        jbModificarP.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jbModificarP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/6071808_folder_progress_task_update_update task progress_icon.png"))); // NOI18N
+        jbModificarP.setText("Modificar");
+        jbModificarP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jbModificarP.setFocusable(false);
+        jbModificarP.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbModificarP.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbModificarP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbModificarPActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
@@ -832,7 +847,9 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addComponent(jBGuardarP, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(276, 276, 276)
+                        .addGap(66, 66, 66)
+                        .addComponent(jbModificarP, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(70, 70, 70)
                         .addComponent(jBElimiP, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel7)
@@ -861,13 +878,18 @@ public class Inicio extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jTDomic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel9)
-                .addGap(18, 18, 18)
-                .addComponent(JTTel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jBElimiP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jBGuardarP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(18, 18, 18)
+                        .addComponent(JTTel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jBElimiP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBGuardarP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jbModificarP)))
                 .addGap(34, 34, 34))
         );
 
@@ -1177,8 +1199,14 @@ public class Inicio extends javax.swing.JFrame {
         jLabel31.setForeground(new java.awt.Color(255, 51, 51));
         jLabel31.setText("Inicio:");
         jPanel12.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
-        jPanel12.add(jdFechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 460, -1));
-        jPanel12.add(jdFechaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 460, -1));
+
+        jdFechaInicio.setBackground(new java.awt.Color(255, 153, 153));
+        jdFechaInicio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel12.add(jdFechaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 350, 160, -1));
+
+        jdFechaFin.setBackground(new java.awt.Color(255, 153, 153));
+        jdFechaFin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel12.add(jdFechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 160, -1));
 
         jPanel5.setBackground(new java.awt.Color(255, 204, 204));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -1968,6 +1996,17 @@ public class Inicio extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jtAltura1KeyTyped
 
+    private void jbModificarPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbModificarPActionPerformed
+        Paciente pac = new Paciente ();
+        pac.setNombre(jTNombre.getText());
+        pac.setDni(Integer.parseInt(JtDniP.getText()));
+        pac.setDomicilio(jTDomic.getText());
+        pac.setTelefono(Integer.parseInt(JTTel.getText()));
+        pac.setIdPaciente(Integer.parseInt(jTIdP.getText()));
+        PacienteData pd = new PacienteData();
+        pd.modificarPaciente(pac);
+    }//GEN-LAST:event_jbModificarPActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2107,6 +2146,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton jbMenos;
     private javax.swing.JButton jbModificarComida;
     private javax.swing.JButton jbModificarDieta;
+    private javax.swing.JButton jbModificarP;
     private javax.swing.JButton jbSalir;
     private com.toedter.calendar.JDateChooser jdFechaFin;
     private com.toedter.calendar.JDateChooser jdFechaInicio;
