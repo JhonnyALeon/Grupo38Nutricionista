@@ -107,7 +107,32 @@ public class DietaData {
         
     }
     
-    
+    public void ModificarDieta(Dieta dieta){
+        
+        String sql="UPDATE dieta SET estado=?, fechaI=?,pesoI=?,pesoAc=?,pesoF=?,fechaF=?"
+                + "WHERE idDieta=?";
+        
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setBoolean(1, dieta.isEstado());
+            ps.setDate(2, Date.valueOf(dieta.getFechaI()));
+            ps.setDouble(3, dieta.getPesoI());
+            ps.setDouble(4, dieta.getPesoA());
+            ps.setDouble(5, dieta.getPesoF());
+            ps.setDate(6, Date.valueOf(dieta.getFechaF()));
+            ps.setInt(7, dieta.getIdDieta());
+            
+           int exito = ps.executeUpdate();
+            if (exito == 1) {
+                JOptionPane.showMessageDialog(null, "Dieta modificada exitosamente");
+
+            }
+            ps.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al modificar al paciente, verifique los datos "
+                    + "y vuelva a intentarlo");
+        }
+    }
     
     
 }
