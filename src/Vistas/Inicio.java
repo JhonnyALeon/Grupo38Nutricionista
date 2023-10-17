@@ -189,8 +189,8 @@ public class Inicio extends javax.swing.JFrame {
         r1 = new javax.swing.JRadioButton();
         r2 = new javax.swing.JRadioButton();
         r3 = new javax.swing.JRadioButton();
-        r4 = new javax.swing.JRadioButton();
         r5 = new javax.swing.JRadioButton();
+        r4 = new javax.swing.JRadioButton();
         jScrollPane9 = new javax.swing.JScrollPane();
         jtReceta = new javax.swing.JTextPane();
         jPanel16 = new javax.swing.JPanel();
@@ -1359,12 +1359,12 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup3.add(r4);
-
         buttonGroup3.add(r5);
-        r5.addActionListener(new java.awt.event.ActionListener() {
+
+        buttonGroup3.add(r4);
+        r4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                r5ActionPerformed(evt);
+                r4ActionPerformed(evt);
             }
         });
 
@@ -1389,11 +1389,11 @@ public class Inicio extends javax.swing.JFrame {
                             .addGroup(jPanel15Layout.createSequentialGroup()
                                 .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(r5))
+                                .addComponent(r4))
                             .addGroup(jPanel15Layout.createSequentialGroup()
                                 .addComponent(jLabel39)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(r4))
+                                .addComponent(r5))
                             .addGroup(jPanel15Layout.createSequentialGroup()
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1434,10 +1434,10 @@ public class Inicio extends javax.swing.JFrame {
                                 .addGap(42, 42, 42)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel39)
-                                    .addComponent(r4))
+                                    .addComponent(r5))
                                 .addGap(26, 26, 26)
                                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(r5))
+                            .addComponent(r4))
                         .addGap(57, 57, 57))
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addComponent(r1)
@@ -1915,38 +1915,38 @@ public class Inicio extends javax.swing.JFrame {
 
         jtMasa1.setText(""+IMC);
 
-        if (IMC < 18.5) {
+        if (IMC < 18.50) {
             r1.setSelected(true);
             dieta = "Sin riesgo pero con precaucion"
                     + " de no adelgazar mas. ";
 
-        } else if (IMC > 18.4 && IMC<= 24.9) {
+        } else if (IMC > 18.49 && IMC<= 24.99) {
 
             r2.setSelected(true);
             dieta = "Estado saludable";
 
-        } else if (IMC>= 25 && IMC<= 29.9) {
+        } else if (IMC>= 25 && IMC<= 29.99) {
 
             r3.setSelected(true);
             dieta = "Sin riesgo pero con "
                     + "precaucion de no engordar mas.";
 
-        } else if (IMC>= 30 && IMC<= 34.9) {
+        } else if (IMC>= 30 && IMC<= 34.99) {
 
             r4.setSelected(true);
             dieta = "Sobrecarga de articulaciones, cansancio "
                     + "excesivo y cierto riesgo de enfermedades"
                     + "cardiovasculares.";
 
-        } else {
-
+        } else { 
+               
             r5.setSelected(true);
             dieta = "Problemas cardiacos, diabetes, hipertension, "
                     + "enfermedad de vesicula y algunos canceres.";
-        }
-
+   
+        
         jtReceta.setText(dieta);
-
+        }
 
     }//GEN-LAST:event_jButton6ActionPerformed
     
@@ -1962,9 +1962,9 @@ public class Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_r1ActionPerformed
 
-    private void r5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r5ActionPerformed
+    private void r4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_r5ActionPerformed
+    }//GEN-LAST:event_r4ActionPerformed
 
     private void r3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r3ActionPerformed
         // TODO add your handling code here:
