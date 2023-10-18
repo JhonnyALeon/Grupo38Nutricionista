@@ -427,12 +427,12 @@ public class Inicio extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(255, 153, 153));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel2.setText("Nombre:");
+        jLabel2.setText("(*)Nombre:");
 
         jLabel3.setBackground(new java.awt.Color(255, 153, 153));
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel3.setText("Calorías:");
+        jLabel3.setText("(*)Calorías:");
 
         jLabel5.setBackground(new java.awt.Color(255, 153, 153));
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -443,11 +443,21 @@ public class Inicio extends javax.swing.JFrame {
         jtNombreComida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jtNombreComida.setForeground(new java.awt.Color(255, 51, 51));
         jtNombreComida.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jtNombreComida.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtNombreComidaKeyTyped(evt);
+            }
+        });
 
         jtCal.setBackground(new java.awt.Color(255, 204, 204));
         jtCal.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jtCal.setForeground(new java.awt.Color(255, 51, 51));
         jtCal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jtCal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtCalKeyTyped(evt);
+            }
+        });
 
         jbGuardarComida.setBackground(new java.awt.Color(255, 153, 153));
         jbGuardarComida.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -1720,7 +1730,9 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jbGuardarComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarComidaActionPerformed
-        // TODO add your handling code here:
+       if(jtNombreComida.getText().equals("")|| jtCal.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Debe completar los campos con (*) ");
+        }else{
         Comida com = new Comida();
         ComidaData cd = new ComidaData();
 
@@ -1742,7 +1754,7 @@ public class Inicio extends javax.swing.JFrame {
         cd.GuardarComida(com);
         jtNombreComida.setText("");
         jtCal.setText("");
-
+       }
     }//GEN-LAST:event_jbGuardarComidaActionPerformed
 
     private void jbBuscarComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarComidaActionPerformed
@@ -1796,7 +1808,10 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jbCalcularMasaActionPerformed
 
     private void jbModificarComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbModificarComidaActionPerformed
-        Comida com = new Comida();
+        if(jtNombreComida.getText().equals("")|| jtCal.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Debe completar los campos con (*) ");
+        }else {
+         Comida com = new Comida();
         ComidaData cd = new ComidaData();
 
         com.setIdComida(Integer.parseInt(jtIdComida.getText()));
@@ -1818,6 +1833,7 @@ public class Inicio extends javax.swing.JFrame {
         cd.ModificarComida(com);
         jtNombreComida.setText("");
         jtCal.setText("");
+        }
     }//GEN-LAST:event_jbModificarComidaActionPerformed
 
     private void jbBuscarComidaNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarComidaNombreActionPerformed
@@ -2126,7 +2142,28 @@ public class Inicio extends javax.swing.JFrame {
 
       if (!ok) {
     evt.consume();
+    }
     }//GEN-LAST:event_jTNombreKeyTyped
+
+    private void jtNombreComidaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtNombreComidaKeyTyped
+           int val =evt.getKeyChar();
+        boolean ok = (val>= 'A' && val<= 'Z')|| (val>= 'a' && val<='z');
+        if (!ok) {
+            evt.consume();
+      }      
+        
+    }//GEN-LAST:event_jtNombreComidaKeyTyped
+
+    private void jtCalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtCalKeyTyped
+         int val = evt.getKeyChar();
+
+        boolean ok = val >= 46 && val <= 57;
+
+        if (!ok) {
+            evt.consume();
+
+       
+    }//GEN-LAST:event_jtCalKeyTyped
     }
     /**
      * @param args the command line arguments
