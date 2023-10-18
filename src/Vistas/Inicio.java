@@ -771,6 +771,11 @@ public class Inicio extends javax.swing.JFrame {
         jTNombre.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTNombre.setForeground(new java.awt.Color(255, 51, 51));
         jTNombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jTNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTNombreKeyTyped(evt);
+            }
+        });
 
         jTDomic.setBackground(new java.awt.Color(255, 204, 204));
         jTDomic.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -819,9 +824,9 @@ public class Inicio extends javax.swing.JFrame {
         JTTel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         JTTel.setForeground(new java.awt.Color(255, 51, 51));
         JTTel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        JTTel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTTelActionPerformed(evt);
+        JTTel.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                JTTelKeyTyped(evt);
             }
         });
 
@@ -1018,12 +1023,17 @@ public class Inicio extends javax.swing.JFrame {
         jLabel6.setBackground(new java.awt.Color(255, 153, 153));
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel6.setText("Buscar régimen por DNI Paciente:");
+        jLabel6.setText("(*)Buscar régimen por DNI Paciente:");
 
         jtDniPacDieta.setBackground(new java.awt.Color(255, 204, 204));
         jtDniPacDieta.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jtDniPacDieta.setForeground(new java.awt.Color(255, 51, 51));
         jtDniPacDieta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jtDniPacDieta.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtDniPacDietaKeyTyped(evt);
+            }
+        });
 
         jbBuscarDieta.setBackground(new java.awt.Color(255, 204, 204));
         jbBuscarDieta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/9004811_search_find_magnifier_zoom_icon.png"))); // NOI18N
@@ -1079,14 +1089,14 @@ public class Inicio extends javax.swing.JFrame {
         jLabel13.setBackground(new java.awt.Color(255, 153, 153));
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel13.setText("Peso Inicial:");
+        jLabel13.setText("(*)Peso Inicial:");
         jPanel12.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 141, -1, -1));
 
         jtIDDieta.setBackground(new java.awt.Color(255, 204, 204));
         jtIDDieta.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jtIDDieta.setForeground(new java.awt.Color(255, 51, 51));
         jtIDDieta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel12.add(jtIDDieta, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 25, 462, -1));
+        jPanel12.add(jtIDDieta, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 25, 430, -1));
 
         jtPacNombre.setBackground(new java.awt.Color(255, 204, 204));
         jtPacNombre.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -1143,7 +1153,12 @@ public class Inicio extends javax.swing.JFrame {
         jtPesoIni.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jtPesoIni.setForeground(new java.awt.Color(255, 51, 51));
         jtPesoIni.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel12.add(jtPesoIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 139, 462, -1));
+        jtPesoIni.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtPesoIniKeyTyped(evt);
+            }
+        });
+        jPanel12.add(jtPesoIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 139, 430, -1));
 
         jLabel21.setBackground(new java.awt.Color(255, 153, 153));
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -1165,7 +1180,7 @@ public class Inicio extends javax.swing.JFrame {
         jLabel23.setBackground(new java.awt.Color(255, 153, 153));
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel23.setText("Fin:");
+        jLabel23.setText("(*)Fin:");
         jPanel12.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, -1, -1));
 
         jtPesoActual.setBackground(new java.awt.Color(255, 204, 204));
@@ -1178,7 +1193,12 @@ public class Inicio extends javax.swing.JFrame {
         jtPesoIdeal.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jtPesoIdeal.setForeground(new java.awt.Color(255, 51, 51));
         jtPesoIdeal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel12.add(jtPesoIdeal, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 296, 462, -1));
+        jtPesoIdeal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtPesoIdealKeyTyped(evt);
+            }
+        });
+        jPanel12.add(jtPesoIdeal, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 296, 440, -1));
 
         jbEliminarDieta.setBackground(new java.awt.Color(255, 153, 153));
         jbEliminarDieta.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -1193,13 +1213,13 @@ public class Inicio extends javax.swing.JFrame {
         jLabel30.setBackground(new java.awt.Color(255, 153, 153));
         jLabel30.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel30.setText("Peso Ideal:");
+        jLabel30.setText("(*)Peso Ideal:");
         jPanel12.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 298, -1, -1));
 
         jLabel31.setBackground(new java.awt.Color(255, 153, 153));
         jLabel31.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel31.setText("Inicio:");
+        jLabel31.setText("(*)Inicio:");
         jPanel12.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
 
         jdFechaFin.setBackground(new java.awt.Color(255, 204, 204));
@@ -1208,6 +1228,11 @@ public class Inicio extends javax.swing.JFrame {
 
         jdFechaInicio.setBackground(new java.awt.Color(255, 204, 204));
         jdFechaInicio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jdFechaInicio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jdFechaInicioKeyTyped(evt);
+            }
+        });
         jPanel12.add(jdFechaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 350, 460, -1));
 
         jPanel5.setBackground(new java.awt.Color(255, 204, 204));
@@ -1611,10 +1636,6 @@ public class Inicio extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jbSalirActionPerformed
 
-    private void JTTelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTTelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JTTelActionPerformed
-
     private void jTDomicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDomicActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTDomicActionPerformed
@@ -1662,14 +1683,18 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jBGuardarPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarPActionPerformed
-        Paciente pac = new Paciente();
+       if(JtDniP.getText().equals("")||jTDomic.getText().equals("")
+               ||jTNombre.getText().equals("")||JTTel.getText().equals("")){
+           JOptionPane.showMessageDialog(null,"No pueden existir campos vacios");
+           
+       }else{ Paciente pac = new Paciente();
         PacienteData pd = new PacienteData();
         pac.setDni(Integer.parseInt(JtDniP.getText()));
         pac.setDomicilio(jTDomic.getText());
         pac.setNombre(jTNombre.getText());
         pac.setTelefono(Integer.parseInt(JTTel.getText()));
         pd.guardarPaciente(pac);
-
+       }
 
     }//GEN-LAST:event_jBGuardarPActionPerformed
 
@@ -1878,6 +1903,13 @@ public class Inicio extends javax.swing.JFrame {
  }
  
     private void jbGuardarDietaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarDietaActionPerformed
+       if(jdFechaInicio.getDate()==null||jdFechaFin.getDate()==null
+               ||jtPesoIni.getText().equals("")||jtPesoIdeal.getText().equals("")
+               ||jtDniPacDieta.getText().equals("")){
+           JOptionPane.showMessageDialog(null,"completar los campos con (*)");
+           
+       }else{
+        
         int dni = Integer.parseInt(jtDniPacDieta.getText());
         PacienteData pd = new PacienteData();
         Paciente pc = pd.buscarPorDni(dni);
@@ -1894,7 +1926,7 @@ public class Inicio extends javax.swing.JFrame {
         DietaData dd = new DietaData();
         dd.GuardarDieta(dieta);
     }//GEN-LAST:event_jbGuardarDietaActionPerformed
-
+    }
     private void jbAddComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAddComidaActionPerformed
         // TODO add your handling code here:
         int idDieta = Integer.parseInt(jtIDDieta.getText());
@@ -2000,6 +2032,12 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jtAltura1KeyTyped
 
     private void jbModificarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbModificarPacienteActionPerformed
+        if(JtDniP.getText().equals("")||jTDomic.getText().equals("")
+               ||jTNombre.getText().equals("")||JTTel.getText().equals("")){
+           JOptionPane.showMessageDialog(null,"No pueden existir campos vacios");
+           
+       }else{
+        
         int id=Integer.parseInt(jTIdP.getText());
         int tel=Integer.parseInt(JTTel.getText());
         int dni=Integer.parseInt(JtDniP.getText());
@@ -2011,11 +2049,16 @@ public class Inicio extends javax.swing.JFrame {
         JtDniP.setText("");
         jTNombre.setText("");
         jTDomic.setText("");
-        
+        }
     }//GEN-LAST:event_jbModificarPacienteActionPerformed
 
     private void jbModificarDietaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbModificarDietaActionPerformed
-       
+       if(jdFechaInicio.getDate()==null||jdFechaFin.getDate()==null
+               ||jtPesoIni.getText().equals("")||jtPesoIdeal.getText().equals("")
+               ||jtDniPacDieta.getText().equals("")){
+           JOptionPane.showMessageDialog(null,"completar los campos con (*)");
+           
+       }else{
         Dieta dieta = new Dieta();
         dieta.setFechaI(jdFechaInicio.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
         dieta.setFechaF(jdFechaFin.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
@@ -2029,7 +2072,62 @@ public class Inicio extends javax.swing.JFrame {
         DietaData dd = new DietaData();
         dd.ModificarDieta(dieta);
     }//GEN-LAST:event_jbModificarDietaActionPerformed
+    }
+    private void JTTelKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTTelKeyTyped
+        int val = evt.getKeyChar();
 
+        boolean ok = val >= 46 && val <= 57;
+
+        if (!ok) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_JTTelKeyTyped
+
+    private void jtDniPacDietaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtDniPacDietaKeyTyped
+        int val = evt.getKeyChar();
+
+        boolean ok = val >= 46 && val <= 57;
+
+        if (!ok) {
+            evt.consume();
+    }//GEN-LAST:event_jtDniPacDietaKeyTyped
+    }
+    private void jtPesoIniKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtPesoIniKeyTyped
+        int val = evt.getKeyChar();
+
+        boolean ok = val >= 46 && val <= 57;
+
+        if (!ok) {
+            evt.consume();
+    }//GEN-LAST:event_jtPesoIniKeyTyped
+    }
+    private void jtPesoIdealKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtPesoIdealKeyTyped
+        int val = evt.getKeyChar();
+
+        boolean ok = val >= 46 && val <= 57;
+
+        if (!ok) {
+            evt.consume();
+    }//GEN-LAST:event_jtPesoIdealKeyTyped
+    }
+    private void jdFechaInicioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jdFechaInicioKeyTyped
+        int val = evt.getKeyChar();
+
+        boolean ok = val >= 46 && val <= 57;
+
+        if (!ok) {
+            evt.consume();
+    }//GEN-LAST:event_jdFechaInicioKeyTyped
+    }
+    private void jTNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNombreKeyTyped
+     int val = evt.getKeyChar();
+
+      boolean ok = (val >= 'A' && val <= 'Z') || (val >= 'a' && val <= 'z');
+
+      if (!ok) {
+    evt.consume();
+    }//GEN-LAST:event_jTNombreKeyTyped
+    }
     /**
      * @param args the command line arguments
      */
