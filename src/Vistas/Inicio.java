@@ -192,7 +192,7 @@ public class Inicio extends javax.swing.JFrame {
         r3 = new javax.swing.JRadioButton();
         r5 = new javax.swing.JRadioButton();
         r4 = new javax.swing.JRadioButton();
-        jScrollPane9 = new javax.swing.JScrollPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
         jtReceta = new javax.swing.JTextPane();
         jPanel16 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
@@ -1417,19 +1417,20 @@ public class Inicio extends javax.swing.JFrame {
         jtReceta.setBackground(new java.awt.Color(255, 204, 204));
         jtReceta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jtReceta.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jtReceta.setForeground(new java.awt.Color(0, 0, 0));
-        jScrollPane9.setViewportView(jtReceta);
+        jScrollPane1.setViewportView(jtReceta);
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGap(229, 229, 229)
-                .addComponent(jLabel36)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(r2)
+                            .addComponent(r3)
+                            .addComponent(r1)))
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(0, 63, Short.MAX_VALUE)
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1443,18 +1444,16 @@ public class Inicio extends javax.swing.JFrame {
                                 .addComponent(r5))
                             .addGroup(jPanel15Layout.createSequentialGroup()
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel37)
                                     .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(r2)
-                            .addComponent(r3)
-                            .addComponent(r1))))
+                                    .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 31, Short.MAX_VALUE)))))
                 .addGap(61, 61, 61))
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(229, 229, 229)
+                .addComponent(jLabel36)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1481,11 +1480,11 @@ public class Inicio extends javax.swing.JFrame {
                                 .addGap(42, 42, 42)
                                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel39)
-                                    .addComponent(r5))
-                                .addGap(26, 26, 26)
-                                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(r5)))
                             .addComponent(r4))
-                        .addGap(57, 57, 57))
+                        .addGap(37, 37, 37)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(86, 86, 86))
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addComponent(r1)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -2007,9 +2006,9 @@ public class Inicio extends javax.swing.JFrame {
             dieta = "Problemas cardiacos, diabetes, hipertension, "
                     + "enfermedad de vesicula y algunos canceres.";
    
-        
-        jtReceta.setText(dieta);
         }
+        jtReceta.setText(dieta);
+        
 
     }//GEN-LAST:event_jButton6ActionPerformed
     
@@ -2296,6 +2295,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -2303,7 +2303,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextField jTDomic;
     private javax.swing.JTextField jTIdP;
     private javax.swing.JTextField jTNombre;
